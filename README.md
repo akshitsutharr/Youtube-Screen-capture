@@ -1,8 +1,29 @@
-# YouTube Screenshot Capture Extension 📸
+<div align="center">
 
-A powerful Chrome extension that captures screenshots from YouTube videos at custom intervals with intelligent chunking for long videos.
+# 🎬 YouTube Screenshot Capture
 
-![Extension Icon](icon128.png)
+### Capture YouTube video frames at custom intervals with intelligent chunking for long videos.
+
+<br>
+
+<img src="icon128.png" width="120" />
+
+<br><br>
+
+<a href="https://github.com/akshitsutharr/Youtube-Screen-capture/releases/download/v1.0.0/youtube-screen-capture-extension-v1.0.0.zip">
+  <img src="https://img.shields.io/badge/⬇ Download%20v1.0.0-1f6feb?style=for-the-badge&logo=google-chrome&logoColor=white" />
+</a>
+
+<a href="https://github.com/akshitsutharr/Youtube-Screen-capture/releases/tag/v1.0.0">
+  <img src="https://img.shields.io/badge/📄 Release%20Notes-222222?style=for-the-badge" />
+</a>
+<br><br>
+
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Platform](https://img.shields.io/badge/platform-Chrome-success)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
+
+</div>
 
 
 ## 📸 Screenshots
