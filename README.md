@@ -4,6 +4,43 @@ A powerful Chrome extension that captures screenshots from YouTube videos at cus
 
 ![Extension Icon](icon128.png)
 
+
+## 📸 Screenshots
+
+<table border="1" align="center">
+  <tr>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/akshitsutharr/Youtube-Screen-capture/main/assets/Screenshot%202026-02-17%20004619.png" width="400"><br>
+      <b>Main Extension UI</b>
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/akshitsutharr/Youtube-Screen-capture/main/assets/Screenshot%202026-02-17%20004709.png" width="400"><br>
+      <b>Interval Selection Section</b>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/akshitsutharr/Youtube-Screen-capture/main/assets/Screenshot%202026-02-17%20005115.png" width="400"><br>
+      <b>All Images Downloaded as a ZIP at Custom Intervals</b>
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/akshitsutharr/Youtube-Screen-capture/main/assets/Screenshot%202026-02-17%20004930.png" width="400"><br>
+      <b>Processing Progress</b>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" align="center">
+      <img src="https://raw.githubusercontent.com/akshitsutharr/Youtube-Screen-capture/main/assets/Screenshot%202026-02-17%20004834.png" width="820"><br>
+      <b>Direct Button For Single Screen Capture or Screenshot</b>
+    </td>
+  </tr>
+</table>
+
+
+
+
 ## ✨ Features
 
 - **Custom Time Range**: Capture screenshots from any start time to any end time (supports HH:MM:SS and MM:SS formats)
