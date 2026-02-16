@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Screenshot Capture</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="icon128.png" alt="Camera Icon" class="logo">
+      <h1>YouTube Screenshot Capture</h1>
+      <p class="subtitle">Capture frames at custom intervals</p>
+    </div>
+
+    <div class="content">
+      <div id="not-youtube" class="warning-box">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+        </svg>
+        <p>Please open a YouTube video to use this extension</p>
+      </div>
+
+      <div id="youtube-interface" style="display: none;">
+        <div class="video-info">
+          <div class="info-row">
+            <span class="label">Video Duration:</span>
+            <span id="video-duration" class="value">--:--</span>
+          </div>
+          <div class="info-row">
+            <span class="label">Status:</span>
+            <span id="status" class="value status-ready">Ready</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="start-time">Start Time (MM:SS or HH:MM:SS)</label>
+          <input type="text" id="start-time" placeholder="0:00" value="0:00">
+        </div>
+
+        <div class="input-group">
+          <label for="end-time">End Time (MM:SS or HH:MM:SS)</label>
+          <input type="text" id="end-time" placeholder="10:00">
+        </div>
+
+        <div class="input-group">
+          <label for="interval">Screenshot Interval (seconds)</label>
+          <input type="number" id="interval" min="1" max="3600" value="10">
+          <div class="interval-presets">
+            <button class="preset-btn" data-value="5">5s</button>
+            <button class="preset-btn" data-value="10">10s</button>
+            <button class="preset-btn" data-value="30">30s</button>
+            <button class="preset-btn" data-value="60">1m</button>
+          </div>
+        </div>
+
+        <div class="quality-selector">
+          <label>Screenshot Quality</label>
+          <div class="quality-options">
+            <button class="quality-btn active" data-quality="0.9">High</button>
+            <button class="quality-btn" data-quality="0.7">Medium</button>
+            <button class="quality-btn" data-quality="0.5">Low</button>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="16" x2="12" y2="12"/>
+            <line x1="12" y1="8" x2="12.01" y2="8"/>
+          </svg>
+          <div>
+            <strong>Smart Chunking:</strong> Videos longer than 1 hour will be processed in 1-hour chunks and downloaded as separate ZIP files.
+          </div>
+        </div>
+
+        <div class="estimated-info">
+          <div class="estimate-row">
+            <span>Estimated Screenshots:</span>
+            <span id="estimated-count" class="highlight">0</span>
+          </div>
+          <div class="estimate-row">
+            <span>Estimated Size:</span>
+            <span id="estimated-size" class="highlight">~0 MB</span>
+          </div>
+        </div>
+
+        <div class="progress-section" id="progress-section" style="display: none;">
+          <div class="progress-header">
+            <span id="progress-text">Processing...</span>
+            <span id="progress-percent">0%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+          <div class="progress-details">
+            <span id="current-screenshot">0</span> / <span id="total-screenshots">0</span> screenshots
+          </div>
+        </div>
+
+        <div class="button-group">
+          <button id="start-capture" class="btn btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="13" r="4"/>
+            </svg>
+            Start Capture
+          </button>
+          <button id="stop-capture" class="btn btn-secondary" style="display: none;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <rect x="6" y="6" width="12" height="12"/>
+            </svg>
+            Stop
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Supports videos up to 10+ hours with smart chunking</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
