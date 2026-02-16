@@ -219,7 +219,6 @@ SOFTWARE.
 
 ## 🌟 Acknowledgments
 
-- Icon from [Flaticon](https://www.flaticon.com/)
 - JSZip library by [Stuart Knightley](https://stuk.github.io/jszip/)
 - Inspired by the need to analyze educational content efficiently
 
@@ -233,6 +232,7 @@ For issues, questions, or suggestions:
 ---
 
 **Made with ❤️ for YouTube content creators and researchers**
+**By Akshit Suthar
 
 **Version**: 1.0.0  
 **Last Updated**: February 2026
